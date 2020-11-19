@@ -71,7 +71,7 @@ func (c *DingTalkClient) SendRobotMessage(ctx context.Context, sendRoboReq SendR
 		return
 	}
 	param.Add(ConstAccessToken, sendRoboReq.Token)
-	// https://oapi.dingtalk.com/robot/send?access_token=fbe7b8b169c2571a3335baacf6be0dee54c692bd4884490b8fe973250b3e509b
+	// https://oapi.dingtalk.com/robot/send?access_token=
 	sendRobotReqUrl = SendRobotMessageUrl + "?" + param.Encode()
 	if bodyBytes, err = jsoniter.Marshal(sendRoboReq.Message); err != nil {
 		return
